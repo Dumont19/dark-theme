@@ -1,0 +1,162 @@
+:root {
+    --bg-color-light: #eceff1;
+    --bg-color-dark: #263238;
+    --bg-color-dark-card: #37474f;
+    --br-color-dark-card-image: #273035;
+    --color-subtitle: #b4b4b4;
+    --color-description: #e2e2e2;
+    --white: #fff;
+    --grey: #444;
+    --header-shadow: .5px .5px 10px .5px #000;
+    --card-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .3);
+    --bg-color-card-image: #eff7fc;
+}
+
+* {
+    font-family: 'Helvetica', 'san-serif';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg-color-light);
+    transition: .5s;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi-moon {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color-light);
+    box-shadow: var(--header-shadow);
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 4rem;
+    display: flex;
+    width: 60%;
+    position: relative;
+    background-color: var(--white);
+    box-shadow: var(--card-shadow);
+}
+
+.card-image,
+.card-details {
+    width: 50%;
+    padding: 2rem;
+}
+
+.card-image {
+    padding: 2rem;
+    width: 50%;
+    position: relative;
+    background-color: var(--bg-color-card-image);
+}
+
+.card-image span {
+    font-size: 9rem;
+    font-weight: 900;
+}
+
+.card img {
+    width: 130%;
+    transform: rotate(-25deg);
+    position: absolute;
+    right: -1rem;
+    top: 10rem;
+}
+
+.card-details h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--grey);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.description {
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.btn {
+    background-color: var(--grey);
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    border-radius: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dark,
+.dark header {
+    background-color: var(--bg-color-dark);
+    color: var(--white);
+}
+
+.dark .bi-sun {
+    display: none;
+}
+
+.dark .bi-moon {
+    display: block;
+}
+
+.dark .card {
+    background-color: var(--bg-color-dark-card);
+}
+
+.dark .card-image {
+    background-color: var(--br-color-dark-card-image);
+}
+
+.dark .subtitle {
+    color: var(--color-subtitle);
+}
+
+.dark .description {
+    color: var(--color-description);
+}
+
+.dark .btn {
+    background-color: var(--color-subtitle);
+    color: var(--br-color-dark-card-image);
+}
